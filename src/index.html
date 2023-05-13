@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Gambling-155"
+})
+
+<body>
+	@@include('html/_preloader.htm',{})
+	<div class="wrapper wrapper_main">
+		<div class="wrapper__main main">
+			<div class="main__body">
+				<div class="main__content">
+					<div class="main__buttons-box">
+						<div class="main__header header-main">
+							<div class="header-main__body">
+								<button type="button" data-privacy class="header-main__button">
+									<span>P</span>
+								</button>
+								<div class="header-main__score-box score-box _star">
+									<div class="score-box__body">
+										<div class="score-box__icon-box">
+											<div class="score-box__icon icon-star icon-anim"></div>
+										</div>
+										<div class="score-box__score check-star">0/9000</div>
+									</div>
+								</div>
+								<div class="header-main__score-box score-box">
+									<div class="score-box__body">
+										<div class="score-box__icon-box">
+											<div class="score-box__icon icon-game icon-anim"></div>
+										</div>
+										<div class="score-box__score score">0</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cards__slider swiper">
+							<div class="cards__wrapper swiper-wrapper">
+								<div class="cards__slide swiper-slide">
+									<div class="cards__item">
+										<div class="cards__image">
+											<img src="@img/other/card-1.png" alt="Image">
+										</div>
+										<div class="cards__button-box">
+											<button type="button" data-btn="game-1" class="cards__button button">
+												<span>Play</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="cards__slide swiper-slide">
+									<div class="cards__item">
+										<div class="cards__image">
+											<img src="@img/other/card-2.png" alt="Image">
+										</div>
+										<div class="cards__button-box">
+											<button type="button" data-btn="game-2" class="cards__button button">
+												<span>Play</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="cards__slide swiper-slide">
+									<div class="cards__item _disabled">
+										<div class="cards__image">
+											<img src="@img/other/card-3.png" alt="Image">
+										</div>
+										<div class="cards__button-box">
+											<button type="button" class="cards__button button">
+												<span>Play</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="cards__slide swiper-slide">
+									<div class="cards__item _disabled">
+										<div class="cards__image">
+											<img src="@img/other/card-4.png" alt="Image">
+										</div>
+										<div class="cards__button-box">
+											<button type="button" class="cards__button button">
+												<span>Play</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="cards__slide swiper-slide">
+									<div class="cards__item _disabled">
+										<div class="cards__image">
+											<img src="@img/other/card-5.png" alt="Image">
+										</div>
+										<div class="cards__button-box">
+											<button type="button" class="cards__button button">
+												<span>Play</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main__hero">
+						<img src="@img/other/hero.png" alt="Image">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

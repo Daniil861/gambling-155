@@ -1,0 +1,384 @@
+.slot {
+	// .slot__body
+
+	&__body {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+
+		min-height: 100vh;
+	}
+
+	&__btn-home {
+		width: 110px;
+		height: 25px;
+		span {
+			font-size: 15px;
+		}
+	}
+
+	&__header {
+		position: relative;
+		z-index: 5;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__game {
+		flex: 1 1 auto;
+
+		display: flex;
+		align-items: center;
+	}
+
+	// .slot__box
+
+	&__box {
+		width: 100vw;
+		position: relative;
+		display: flex;
+		margin: 0 auto;
+	}
+
+	// .slot__cont
+
+	&__cont {
+		position: relative;
+		z-index: 2;
+
+		flex: 1 1 auto;
+	}
+
+	// .slot__controls
+
+	&__controls {
+	}
+
+	&__footer {
+		padding-bottom: 5px;
+	}
+}
+
+.controls-slot {
+	position: absolute;
+	top: 55%;
+	@include adaptiveValue("right", 37, 15, 800, 550, 1);
+	transform: translateY(-50%);
+
+	z-index: 10;
+
+	// .controls-slot__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		row-gap: 10px;
+
+		@media (max-width: 620px) {
+			transform: scale(0.7);
+		}
+	}
+
+	// .controls-slot__button-spin
+
+	&__button-spin {
+		width: 114px;
+		height: 110px;
+
+		background-image: url("@img/icons/btn-play.png");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	&__auto {
+		width: 67px;
+		height: 68px;
+
+		background-image: url("@img/icons/btn-auto.png");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__max {
+		width: 71px;
+		height: 66px;
+
+		background-image: url("@img/icons/btn-max.png");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__max,
+	&__auto,
+	&__button-spin {
+		transition: all 0.3s ease 0s;
+		&._hold {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+		&:active {
+			transform: translateY(3px);
+		}
+	}
+}
+
+.footer-slot {
+	position: relative;
+	height: 45px;
+	// .footer-slot__body
+
+	&__body {
+		position: absolute;
+		z-index: 5;
+		bottom: 4px;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 30px;
+	}
+
+	// .footer-slot__bet-box
+
+	&__bet-box {
+	}
+
+	// .footer-slot__win-box
+
+	&__win-box {
+	}
+}
+
+.bg-frame {
+	width: 156px;
+	height: 39px;
+
+	background-image: url("@img/icons/bg-block.png");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.bet-box {
+	// .bet-box__body
+
+	&__body {
+		position: relative;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		transition: all 0.3s ease 0s;
+
+		padding-inline: 5px;
+		._lock & {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+		@media (max-width: 700px) {
+			column-gap: 5px;
+		}
+	}
+
+	&__info {
+		flex: 1 1 auto;
+
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		font-weight: 400;
+		font-size: 14px;
+		line-height: math.div(18, 14);
+
+		color: #ffffff;
+		@media (max-width: 700px) {
+			font-size: 12px;
+		}
+	}
+
+	&__bet-inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		p {
+			letter-spacing: 0.05em;
+
+			color: #ffeccb;
+			-webkit-text-stroke: 0.2px #472818;
+		}
+	}
+	// .bet-box__bet
+
+	&__bet {
+		position: relative;
+		top: -4px;
+		text-align: center;
+		width: 35px;
+	}
+
+	&__text {
+	}
+
+	&__plus,
+	&__minus {
+		flex-shrink: 0;
+		flex-grow: 0;
+		flex-basis: 28px;
+		width: 28px;
+		height: 27px;
+
+		transition: all 0.3s ease 0s;
+		&:active {
+			transform: scale(0.9);
+		}
+	}
+
+	&__plus {
+		background-image: url("@img/icons/plus.png");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__minus {
+		background-image: url("@img/icons/minus.png");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
+
+#slot3 {
+	flex: 1 1 auto;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+	top: 10px;
+}
+
+.reels3 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+
+	width: 50vw;
+	height: calc((5 / 3) * 100vw);
+	max-height: 31vw;
+	max-width: calc(2.2 * (90vh - 50px));
+
+	background-color: #000f50;
+	border: 1px solid #d3e9f8;
+	border-radius: 5px;
+
+	@media (min-width: 700px) and (min-height: 700px) {
+		max-height: 32vw;
+	}
+}
+
+.reel3 {
+	position: relative;
+	overflow: hidden;
+	z-index: 5;
+	width: 25%;
+	height: 100%;
+
+	.icons {
+		position: relative;
+		z-index: 3;
+		text-align: center;
+
+		img {
+			position: relative;
+			width: calc(100% - 5px);
+			margin: -3px 0 0 -3px;
+			height: auto;
+
+			transform: translate3d(0, 0, 0);
+		}
+	}
+}
+
+#slot3.inverted .reel {
+	transform: scaleY(-1);
+}
+
+#slot3.inverted .reel > .icons > img {
+	transform: scaleY(-1);
+}
+
+//========================================================================================================================================================
+#slot1 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.reels1 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	column-gap: 18px;
+
+	width: 54vw;
+	height: calc((4 / 3) * 100vw);
+	max-height: 28vw;
+	max-width: calc(2.2 * (90vh - 50px));
+	padding-inline: 10px;
+
+	background: #000f50;
+	border: 1px solid #d3e9f8;
+	border-radius: 5px;
+
+	@media (min-width: em(700)) and (min-height: em(700)) {
+		margin-top: 80px;
+		max-height: 29vw;
+	}
+}
+
+.reel1 {
+	position: relative;
+	overflow: hidden;
+	z-index: 5;
+	width: 25%;
+	height: 100%;
+
+	.icons {
+		position: relative;
+		z-index: 3;
+		text-align: center;
+		padding-top: 10px;
+
+		img {
+			position: relative;
+			width: calc(100% - 5px);
+			margin: -3px 0 10px -3px;
+			height: auto;
+
+			transform: translate3d(0, 0, 0);
+		}
+	}
+}
+
+#slot1.inverted .reel {
+	transform: scaleY(-1);
+}
+
+#slot1.inverted .reel > .icons > img {
+	transform: scaleY(-1);
+}

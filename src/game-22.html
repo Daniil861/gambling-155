@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Betting-18 - game-2"
+})
+
+<body>
+	<div data-game="2" class="wrapper wrapper_game wrapper_game-1">
+		<div class="wrapper__slot slot">
+			<div class="slot__body">
+				<div class="slot__header header-main">
+					<div class="header-main__body">
+						<a href="index.html" class="header-main__button-home">
+							<span>MENU</span>
+						</a>
+						<div class="header-main__score-box score-box _star">
+							<div class="score-box__body">
+								<div class="score-box__icon icon-star icon-anim"></div>
+								<div class="score-box__score check-star">Level 1</div>
+								<div class="score-box__inner"></div>
+							</div>
+						</div>
+						<div class="header-main__score-box score-box">
+							<div class="score-box__body">
+								<div class="score-box__icon icon-game icon-anim"></div>
+								<div class="score-box__score check">0</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slot__game">
+					<div class="slot__box">
+						<div class="slot__cont">
+							<div id="slot1" class="slot1">
+								<div id="reels1" class="reels1">
+									<div class="slot__frame">
+										<img src="@img/game-2/frame.png" alt="Image">
+									</div>
+									<div class="reel1"></div>
+									<div class="reel1"></div>
+									<div class="reel1"></div>
+									<div class="reel1"></div>
+									<div class="reel1"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slot__controls controls-slot">
+					<div class="controls-slot__body">
+						<div class="controls-slot__bet-box bet-box">
+							<div class="bet-box__body">
+								<div class="bet-box__minus">-</div>
+								<div class="bet-box__info info">
+									<div class="bet-box__coin-bet-box bg-frame">
+										<div class="bet-box__bet-inner">
+											<p>Bet:</p>
+											<div class="bet-box__bet">0</div>
+										</div>
+									</div>
+								</div>
+								<div class="bet-box__plus">+</div>
+							</div>
+						</div>
+						<div class="controls-slot__button-box">
+							<button type="button" class="controls-slot__max bg-frame"><span>max bet</span></button>
+							<button type="button" class="controls-slot__auto bg-frame"><span>auto</span></button>
+							<div class="controls-slot__button-bet-box">
+								<button type="button" class="controls-slot__button-spin"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

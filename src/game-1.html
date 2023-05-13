@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Gambling-155 | game 1"
+})
+
+<body>
+	<div class="wrapper wrapper_game wrapper_game-3">
+		<div class="wrapper__slot slot">
+			<div class="slot__body">
+				<div class="slot__header header-main">
+					<div class="header-main__body">
+						<a href="index.html" class="header-main__button-home"></a>
+						<div class="header-main__score-box score-box _star">
+							<div class="score-box__body">
+								<div class="score-box__icon-box">
+									<div class="score-box__icon icon-star icon-anim"></div>
+								</div>
+								<div class="score-box__score check-star">0/9000</div>
+							</div>
+						</div>
+						<div class="header-main__score-box score-box">
+							<div class="score-box__body">
+								<div class="score-box__icon-box">
+									<div class="score-box__icon icon-game icon-anim"></div>
+								</div>
+								<div class="score-box__score score">0</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slot__game">
+					<div class="slot__box">
+						<div class="slot__cont">
+							<div id="slot3" class="slot3">
+								<div id="reels3" class="reels3">
+									<div class="reel3"></div>
+									<div class="reel3"></div>
+									<div class="reel3"></div>
+									<div class="reel3"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slot__controls controls-slot">
+					<div class="controls-slot__body">
+						<button type="button" class="controls-slot__auto"></button>
+						<button type="button" class="controls-slot__button-spin"></button>
+						<button type="button" class="controls-slot__max"></button>
+					</div>
+				</div>
+				<div class="slot__footer footer-slot">
+					<div class="footer-slot__body">
+						<div class="footer-slot__bet-box bet-box">
+							<div class="bet-box__body bg-frame">
+								<div class="bet-box__minus"></div>
+								<div class="bet-box__info info">
+									<div class="bet-box__bet-inner">
+										<p>Total Bet</p>
+										<div class="bet-box__bet bet">0</div>
+									</div>
+								</div>
+								<div class="bet-box__plus"></div>
+							</div>
+						</div>
+						<div class="footer-slot__win-box bg-frame">
+							<div class="bet-box__info info">
+								<div class="bet-box__bet-inner">
+									<p>Win</p>
+									<div class="bet-box__bet total-win">0</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="game__final final">
+			<div class="final__body">
+				<div class="final__score-box">
+					<div class="final__score final-check">0</div>
+					<div class="final__lighting"></div>
+				</div>
+				<div class="final__button-box">
+					<button class="final__button button"><span>ok</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

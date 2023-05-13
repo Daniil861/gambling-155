@@ -1,0 +1,211 @@
+.button {
+	position: relative;
+	z-index: 1;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 182px;
+	height: 47px;
+
+	background-color: #ff2837;
+	border: 1px solid #fdd733;
+	border-radius: 10px;
+
+	transition: all 0.3s ease 0s;
+
+	span {
+		font-weight: 800;
+		font-size: 24px;
+		line-height: math.div(31, 24);
+		letter-spacing: 0.05em;
+
+		color: #ffffff;
+	}
+
+	._disabled & {
+		background-color: #9980bd;
+		border: 1px solid #545454;
+	}
+	&:active {
+		transform: translateY(2px);
+	}
+
+	&._hold {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
+//========================================================================================================================================================
+.preloader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	display: flex;
+	width: 100%;
+	min-height: 100vh;
+
+	background: linear-gradient(0deg, rgba(53, 3, 103, 0.76), rgba(53, 3, 103, 0.76)),
+		url("@img/other/bg.png") center / cover no-repeat;
+
+	overflow: hidden;
+	transition: all 0.3s ease 0.3s;
+
+	&__block-acces {
+	}
+
+	&__acces {
+	}
+
+	&__image {
+		position: absolute;
+		z-index: 5;
+		top: 0;
+		right: 0;
+		transform: translateX(20%);
+
+		pointer-events: none;
+	}
+
+	&__button-box {
+		position: absolute;
+		z-index: 5;
+		bottom: 15px;
+		right: 30px;
+	}
+
+	// .preloader__button
+
+	&__button {
+		width: 162px;
+		height: 51px;
+
+		background-image: linear-gradient(180deg, #723efb 0%, #481cb9 100%);
+		box-shadow: 0px 4px 4px rgba(158, 0, 255, 0.27), inset 0px -6px 4px rgba(0, 163, 255, 0.26),
+			inset 0px 4px 4px rgba(255, 247, 207, 0.65);
+		border-radius: 11px;
+
+		span {
+			font-weight: 800;
+			font-size: 24px;
+			line-height: math.div(31, 24);
+			letter-spacing: 0.05em;
+
+			text-transform: uppercase;
+
+			background: linear-gradient(180deg, #ffffff 0%, #1dc9ff 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+			-webkit-text-stroke: 1px rgba(0, 224, 255, 0.28);
+		}
+	}
+
+	&._hide {
+		top: -20%;
+		opacity: 0;
+		visibility: hidden;
+		transition-delay: 0;
+	}
+}
+
+.acces-preloader {
+	position: relative;
+	z-index: 3;
+
+	display: flex;
+	flex-direction: column;
+	max-height: 100vh;
+
+	padding-inline: 35px 185px;
+	padding-block: 15px 100px;
+
+	overflow: auto;
+
+	&._hide {
+		display: none;
+	}
+
+	&__title {
+		font-weight: 800;
+		font-size: 36px;
+		line-height: math.div(47, 36);
+		letter-spacing: 0.05em;
+
+		background-image: linear-gradient(180deg, #ebff00 0%, #ffa800 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+		margin-bottom: 21px;
+	}
+
+	// .acces-preloader__text
+
+	&__text {
+		padding-bottom: rem(12);
+	}
+}
+
+.text-pre {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: math.div(18, 14);
+	letter-spacing: 0.05em;
+
+	color: #ffffff;
+
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+	&__title {
+		text-transform: uppercase;
+	}
+}
+
+.score {
+	&._no-money {
+		animation: no-money 0.7s ease 2;
+	}
+	&._delete-money {
+		animation: delete-money 0.7s ease;
+	}
+	&._anim-add-money {
+		animation: add-money 0.5s ease 3;
+	}
+}
+.icon-anim {
+	&._anim-icon-jump {
+		animation: jump_icon 5s ease;
+	}
+	&._anim-icon-scale {
+		animation: scale_icon 0.5s ease 2;
+	}
+	&._anim-icon-rotate {
+		animation: rotate_icon 1.5s ease-out 1;
+	}
+	&._anim-icon-rotate-2 {
+		animation: rotate_icon-2 1.5s ease 1;
+	}
+}
+
+.text {
+	font-weight: 700;
+	@include adaptiveValue("font-size", 24, 18, 1200, 550, 1);
+	line-height: math.div(23, 20);
+	color: #ffffff;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	&_game {
+		font-weight: 500;
+	}
+}
+
+[type="button"],
+.button {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+//========================================================================================================================================================
